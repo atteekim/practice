@@ -5,15 +5,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
-import java.text.SimpleDateFormat;
 
 @Configuration
 public class DaoFactory {
 
     @Bean
     public UserDao userDao() {
-        UserDao userDao = new UserDao();
+        UserDaoJdbc userDao = new UserDaoJdbc();
         userDao.setDataSource(dataSource());
         return userDao;
     }

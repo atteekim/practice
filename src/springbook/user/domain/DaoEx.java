@@ -1,16 +1,14 @@
 package springbook.user.domain;
 
 import org.junit.runner.JUnitCore;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
 
 public class DaoEx {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-        JUnitCore.main("springbook.user.domain.UserDaoTest");
+//        JUnitCore.main("springbook.user.domain.UserDaoTest");
+        JUnitCore.main("springbook.user.domain.UserDaoTest2");
 
 //        User user = new User();
 //        user.setId("SingleTon ");

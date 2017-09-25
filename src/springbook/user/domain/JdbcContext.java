@@ -13,14 +13,14 @@ public class JdbcContext {
     }
 
     public void executeSql(final String query) throws SQLException {
-        workWithStatementStrategy(new UserDao.StatementStrategy() {
+        workWithStatementStrategy(new UserDaoJdbc.StatementStrategy() {
             public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
                 return c.prepareStatement(query);
             }
         });
     }
 
-    public void workWithStatementStrategy (UserDao.StatementStrategy stmt) throws SQLException {
+    public void workWithStatementStrategy (UserDaoJdbc.StatementStrategy stmt) throws SQLException {
         Connection c = null;
         PreparedStatement ps = null;
 
