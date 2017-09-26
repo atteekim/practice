@@ -30,7 +30,7 @@ public class User {
                 case 1 : return BASIC;
                 case 2 : return SILVER;
                 case 3 : return GOLD;
-                default : throw new AssertionError("Unknown Value : " + value);
+                default : throw new AssertionError("Unknown : " + value);
             }
         }
     }
